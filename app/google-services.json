@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "593152896510",
+    "firebase_url": "https://servizm-9956b.firebaseio.com",
+    "project_id": "servizm-9956b",
+    "storage_bucket": "servizm-9956b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593152896510:android:17f1c8cd87acc91f",
+        "android_client_info": {
+          "package_name": "com.purplesoftwares.servizm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593152896510-e93hb15kel2dj4kbserstdbssn7q3ij0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.purplesoftwares.servizm",
+            "certificate_hash": "6adca37bb1c3732d60a2c57ff530f9a1b6a1daf3"
+          }
+        },
+        {
+          "client_id": "593152896510-241qtd3upkgv90uh5emg0eoh98j4i0q8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.purplesoftwares.servizm",
+            "certificate_hash": "f3844ca77678df7a503f8f88e26667a8214b926b"
+          }
+        },
+        {
+          "client_id": "593152896510-u0t0k9eg04eketma7m7o214sdnd3nlg4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOvmcKjaKIHoOLe2k4f911bScXYqdvOQI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593152896510-u0t0k9eg04eketma7m7o214sdnd3nlg4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

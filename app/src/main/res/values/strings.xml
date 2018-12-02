@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Servizm</string>
+    <string name="phoneauth_text">Telefon numaranızı Giriniz</string>
+    <string name="phoneauthBtnGetCodeText">Get Code</string>
+    <string name="phoneauthTxtPhoneNumberHint">Phone Number</string>
+</resources>
