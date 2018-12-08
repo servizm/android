@@ -69,14 +69,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_login);
-        txtUser = (TextView) findViewById(R.id.txtUser);
-        txtEmail = (TextView) findViewById(R.id.txtEmail);
-        imgProfile = (ImageView) findViewById(R.id.imgProfile);
+        txtUser =  findViewById(R.id.txtUser);
+        txtEmail = findViewById(R.id.txtEmail);
+        imgProfile = findViewById(R.id.imgProfile);
         firebaseAuth = FirebaseAuth.getInstance();
         callbackManager = CallbackManager.Factory.create();
 
-        loginButton = (LoginButton) findViewById(R.id.btnFacebookIn);
-        logoutButton = (LoginButton) findViewById(R.id.btnFacebookOut);
+        loginButton = findViewById(R.id.btnFacebookIn);
+        logoutButton = findViewById(R.id.btnFacebookOut);
         logoutButton.setOnClickListener(this);
 
 

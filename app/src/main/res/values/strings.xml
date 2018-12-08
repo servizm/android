@@ -3,4 +3,5 @@
     <string name="phoneauth_text">Telefon numaranızı Giriniz</string>
     <string name="phoneauthBtnGetCodeText">Get Code</string>
     <string name="phoneauthTxtPhoneNumberHint">Phone Number</string>
+    <string name="swipe_action_icon" />
 </resources>

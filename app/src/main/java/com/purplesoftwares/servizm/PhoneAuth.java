@@ -19,7 +19,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class phoneAuth extends AppCompatActivity {
+public class PhoneAuth extends AppCompatActivity {
 
     private EditText txtPhoneNumber;
     private Button btnGetCode, btnLogOut;
@@ -106,7 +106,7 @@ public class phoneAuth extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e)  {
-            Toast.makeText(phoneAuth.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PhoneAuth.this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
         @Override
