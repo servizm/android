@@ -1,18 +1,20 @@
 package com.purplesoftwares.servizm;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager sliderPager;
     private LinearLayout dotsLayout;
+    private ImageButton arrowButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +24,25 @@ public class MainActivity extends AppCompatActivity {
 
         sliderPager = findViewById(R.id.sliderViewPager);
         dotsLayout =  findViewById(R.id.dotsLayout);
+        arrowButton = findViewById(R.id.arrowButton);
 
-        SwipeActivity sliderAdapter = new SwipeActivity(this) ;
+        arrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendToPhoneAtivity();
+            }
+        });
+
+
+        SlideActivity sliderAdapter = new SlideActivity(this) ;
 
         sliderPager.setAdapter(sliderAdapter);
 
         addDots(0);
 
         sliderPager.addOnPageChangeListener(listener);
+
+
     }
 
     public  void addDots(int position) {
@@ -48,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         if (dots.length > 0)
             dots[position].setTextColor(getResources().getColor(R.color.colorWhite));
     }
+
+
+
     ViewPager.OnPageChangeListener  listener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int i, float v, int i1) {
@@ -58,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageSelected(int i) {
             addDots(i);
+            if (i == 2)
+                arrowButton.setVisibility(View.VISIBLE);
+            else
+                arrowButton.setVisibility(View.INVISIBLE);
+
         }
 
         @Override
@@ -65,4 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
+
+
+    private void sendToPhoneAtivity()
+    {
+        Intent mainIntent = new Intent(MainActivity.this, PhoneAuth.class);
+        startActivity(mainIntent);
+        finish();
+    }
 }

@@ -10,12 +10,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class SwipeActivity extends PagerAdapter {
+public class SlideActivity extends PagerAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
 
-    public SwipeActivity(Context context)
+    public SlideActivity(Context context)
     {
         this.context = context;
     }
@@ -23,7 +23,7 @@ public class SwipeActivity extends PagerAdapter {
     public int[] slide_images = {
             R.mipmap.icon_pack_1,
             R.mipmap.icon_pack_2,
-            R.mipmap.icon_pack_1,
+            R.mipmap.van_icons_merged,
     };
 
     public String[] slide_desc = {
@@ -41,6 +41,7 @@ public class SwipeActivity extends PagerAdapter {
         return slide_desc.length;
     }
 
+
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
         return view == o;
@@ -50,7 +51,7 @@ public class SwipeActivity extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.activity_swipe, container, false);
+        View view = layoutInflater.inflate(R.layout.activity_slide, container, false);
 
         ImageView imageView = view.findViewById(R.id.iPicture);
         TextView textView = view.findViewById(R.id.txtInfo);
