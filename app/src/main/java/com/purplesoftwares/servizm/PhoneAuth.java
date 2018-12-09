@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class PhoneAuth extends AppCompatActivity {
 
     private EditText txtPhoneNumber;
-    private Button btnGetCode, btnLogOut;
+    private Button btnGetCode;
     private EditText txtEnterCode;
     private Button btnSignIn;
    // PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
@@ -43,7 +43,7 @@ public class PhoneAuth extends AppCompatActivity {
         txtEnterCode = findViewById(R.id.txtEnterCode);
         btnSignIn = findViewById(R.id.btnSignIn);
 
-        btnLogOut = findViewById(R.id.btnLogOut);
+
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -67,17 +67,7 @@ public class PhoneAuth extends AppCompatActivity {
         });
 
 
-        btnLogOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-            }
 
-            private void logout() {
-                mAuth.signOut();
-
-            }
-        });
     }
 
     private void sendCode() {
