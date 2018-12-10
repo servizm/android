@@ -9,12 +9,12 @@
 
     <ImageButton
         android:id="@+id/arrowButton"
-        android:layout_width="56dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="24dp"
         android:background="@null"
         android:visibility="invisible"
         app:srcCompat="@mipmap/c_2_a_arrow_01" />
