@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendToPhoneAtivity()
     {
-        Intent mainIntent = new Intent(MainActivity.this, PhoneAuth.class);
+        Intent mainIntent = new Intent(MainActivity.this, FirstLoginPage.class);
         startActivity(mainIntent);
         finish();
     }

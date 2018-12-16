@@ -37,7 +37,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class FacebookActivity extends AppCompatActivity implements View.OnClickListener {
 
     private CallbackManager callbackManager;
     private FirebaseAuth firebaseAuth;
@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         catch (NoSuchAlgorithmException e) {        }
 
         AppEventsLogger.activateApp(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_facebook);
         txtUser =  findViewById(R.id.txtUser);
         txtEmail = findViewById(R.id.txtEmail);
         imgProfile = findViewById(R.id.imgProfile);
@@ -89,12 +89,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onCancel() {
-                Toast.makeText(LoginActivity.this, "Sign In canceled", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FacebookActivity.this, "Sign In canceled", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast.makeText(LoginActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(FacebookActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (AccessToken.getCurrentAccessToken() != null)
-                    Toast.makeText(LoginActivity.this, AccessToken.getCurrentAccessToken().getExpires().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FacebookActivity.this, AccessToken.getCurrentAccessToken().getExpires().toString(), Toast.LENGTH_SHORT).show();
                 if (user != null) {
                     String email = user.getEmail();
                     String userName = user.getDisplayName();
@@ -147,7 +147,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(FacebookActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
 

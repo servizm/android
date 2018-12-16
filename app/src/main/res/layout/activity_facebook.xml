@@ -9,7 +9,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context="com.purplesoftwares.servizm.LoginActivity">
+    tools:context="com.purplesoftwares.servizm.FacebookActivity">
 
     <LinearLayout
         android:id="@+id/llFacebook"

@@ -6,4 +6,7 @@
     <string name="swipe_action_icon" />
     <string name="phone_auth_hadi">hadi!</string>
     <string name="phone_auth_txtdetail">organizasyonuna en uygun servisi bulalım.</string>
+    <string name="activity_phone_txt_veya">veya</string>
+    <string name="activity_phone_txt_face">facebook veya gmail ile devam et</string>
+    <string name="activity_phone_txt">cep telefonu numaranı gir</string>
 </resources>
