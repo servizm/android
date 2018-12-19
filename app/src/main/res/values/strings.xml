@@ -9,4 +9,8 @@
     <string name="activity_phone_txt_veya">veya</string>
     <string name="activity_phone_txt_face">facebook veya gmail ile devam et</string>
     <string name="activity_phone_txt">cep telefonu numaranı gir</string>
+    <string name="activity_send_sms_info_text">telefon numaranıza bir kod göndereceğiz</string>
+    <string name="act_send_sms_phone_number">+90</string>
+    <string name="act_send_sms_detail_text">Sed vel pretium libero. Vivamus quis fringilla lacus. Praesent venenatis malesuada arcu, sit amet lobortis lectus dignissim non. In aliquam nec nulla porttitor vestibulum. Nullam porta quam nisi, sit amet interdum arcu pretium nec.</string>
+    <string name="act_send_sms_btn_ilerle">ilerle</string>
 </resources>
