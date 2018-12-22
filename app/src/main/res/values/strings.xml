@@ -13,4 +13,5 @@
     <string name="act_send_sms_phone_number">+90</string>
     <string name="act_send_sms_detail_text">Sed vel pretium libero. Vivamus quis fringilla lacus. Praesent venenatis malesuada arcu, sit amet lobortis lectus dignissim non. In aliquam nec nulla porttitor vestibulum. Nullam porta quam nisi, sit amet interdum arcu pretium nec.</string>
     <string name="act_send_sms_btn_ilerle">ilerle</string>
+    <string name="activity_enter_sms_txt_detail">nolu telefonunuza gelen kodu girin</string>
 </resources>
