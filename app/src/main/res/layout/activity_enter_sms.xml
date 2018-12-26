@@ -7,6 +7,17 @@
     tools:context=".EnterSmsActivity">
 
     <ImageView
+        android:id="@+id/imageTamam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/com_facebook_loading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/c_2_a_arrow_01" />
+
+    <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,15 +40,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
-        android:id="@+id/txtSMS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtCode"
+        android:layout_width="197dp"
+        android:layout_height="77dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="152dp"
         android:ems="10"
         android:inputType="number|numberSigned"
+        android:maxLength="6"
+        android:textAlignment="viewStart"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnResend"
+        android:layout_width="132dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="264dp"
+        android:background="@mipmap/btn_back_blue"
+        android:text="@string/send_sms_kod_gelmedi_mi"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btnTamam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="76dp"
+        android:gravity="end"
+        android:text="@string/send_sms_tamam"
+        android:textColor="@color/reddish_pink"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

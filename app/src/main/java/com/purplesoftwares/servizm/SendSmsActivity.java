@@ -5,18 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SendSmsActivity extends AppCompatActivity {
-
-
-
     ImageView imageIlerle;
     TextView btnIlerle;
     EditText txtPhone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +29,7 @@ public class SendSmsActivity extends AppCompatActivity {
         btnIlerle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPage();
+                getSmsCode();
             }
         });
         txtPhone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
@@ -39,15 +37,26 @@ public class SendSmsActivity extends AppCompatActivity {
         imageIlerle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPage() ;
+                getSmsCode() ;
             }
         });
-
     }
 
-    private void openPage() {
+    private void getSmsCode() {
+        String phone = txtPhone.getText().toString();
+        if (phone.length() < 13) {
+            Toast.makeText( getApplicationContext(), "Telefon Numarasını Giriniz", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            openEnterSmsActivity();
+        }
+    }
+
+    private void openEnterSmsActivity() {
         Intent mainIntent = new Intent(SendSmsActivity.this, EnterSmsActivity.class);
+        mainIntent.putExtra("phone",txtPhone.getText().toString());
         startActivity(mainIntent);
         finish();
     }
+
 }
