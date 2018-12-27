@@ -16,4 +16,5 @@
     <string name="activity_enter_sms_txt_detail">nolu telefonunuza gelen kodu girin</string>
     <string name="send_sms_kod_gelmedi_mi">kod gelmedi mi?</string>
     <string name="send_sms_tamam">tamam</string>
+    <string name="main_txt_info">Ana Ekran</string>
 </resources>
