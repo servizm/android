@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,16 +28,16 @@ public class EnterSmsActivity extends AppCompatActivity {
     TextView txtCodeInfo,txtCode;
     ImageView imageTamam;
     TextView btnTamam;
-    Button btnResend;
+    Button btnResend, btnback;
     String phone;
     String codeSent;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_sms);
-
-
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -45,6 +46,14 @@ public class EnterSmsActivity extends AppCompatActivity {
         btnTamam = findViewById(R.id.btnTamam);
         imageTamam = findViewById(R.id.imageTamam);
         btnResend = findViewById(R.id.btnResend);
+        btnback = findViewById(R.id.btnback);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         btnResend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +76,17 @@ public class EnterSmsActivity extends AppCompatActivity {
             }
         });
 
-        String caption = txtCodeInfo.getText().toString();
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String caption = txtCodeInfo.getText().toString();
         Intent myIntent = getIntent();
         phone = myIntent.getStringExtra("phone");
         caption = phone +" "+ caption;
         txtCodeInfo.setText(caption);
+
         resendSms();
     }
 
@@ -82,9 +96,9 @@ public class EnterSmsActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            //here you can open new activity
-                            Toast.makeText(getApplicationContext(),
-                                    "Login Successfull", Toast.LENGTH_LONG).show();
+                            Intent setupIntent = new Intent(EnterSmsActivity.this, RegisterActivity.class);
+                            startActivity(setupIntent);
+                            finish();
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                 Toast.makeText(getApplicationContext(),
@@ -97,8 +111,14 @@ public class EnterSmsActivity extends AppCompatActivity {
 
     private void validateSms() {
         String code = txtCode.getText().toString();
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeSent, code);
-        signInWithPhoneAuthCredential(credential);
+        try {
+            PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeSent, code);
+            signInWithPhoneAuthCredential(credential);
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+        }
 
     }
 
@@ -106,7 +126,7 @@ public class EnterSmsActivity extends AppCompatActivity {
     {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phone,        // Phone number to verify
-                60,                 // Timeout duration
+                 60,                 // Timeout duration
                 TimeUnit.SECONDS,   // Unit of timeout
                 this,               // Activity (for callback binding)
                 mCallbacks);        // OnVerificationStateChangedCallbacks
@@ -121,7 +141,7 @@ public class EnterSmsActivity extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e)  {
-            Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override

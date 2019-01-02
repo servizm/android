@@ -17,4 +17,5 @@
     <string name="send_sms_kod_gelmedi_mi">kod gelmedi mi?</string>
     <string name="send_sms_tamam">tamam</string>
     <string name="main_txt_info">Ana Ekran</string>
+    <string name="enter_sms_back"><![CDATA[<]]></string>
 </resources>
