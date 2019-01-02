@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
      FirebaseAuth firebaseAuth;
      FirebaseFirestore db;
 
-     String user_id;
+
 
      EditText txtName,txtPhone,txtEmail, txtBirthDate;
      Button btnSave,btnLogout;
@@ -77,6 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                     userMap.put("phone",phone);
                     userMap.put("email",email);
                     userMap.put("birthDate",birthDate);
+                    String user_id =mAuth.getCurrentUser().getUid();
 
                     db.collection("Users").document(user_id).set(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

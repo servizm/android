@@ -43,7 +43,7 @@
 
     <EditText
         android:id="@+id/txtCode"
-        android:layout_width="197dp"
+        android:layout_width="221dp"
         android:layout_height="77dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="220dp"
@@ -94,13 +94,5 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="&lt;"
-        tools:layout_editor_absoluteX="386dp"
-        tools:layout_editor_absoluteY="267dp" />
 
 </android.support.constraint.ConstraintLayout>
