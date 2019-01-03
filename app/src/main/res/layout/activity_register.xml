@@ -56,7 +56,7 @@
 
     <EditText
         android:id="@+id/txtPhone"
-        android:layout_width="305dp"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="204dp"
@@ -68,10 +68,10 @@
 
     <EditText
         android:id="@+id/txtBirthDate"
-        android:layout_width="304dp"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="260dp"
         android:ems="10"
         android:hint="Doğum Günü"
         android:inputType="date"
@@ -82,7 +82,7 @@
         android:id="@+id/btnSave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="408dp"
         android:text="Kaydet"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +94,23 @@
         android:id="@+id/btnLogout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="424dp"
+        android:layout_marginTop="468dp"
         android:text="Çıkış"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="320dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
