@@ -18,4 +18,5 @@
     <string name="send_sms_tamam">tamam</string>
     <string name="main_txt_info">Ana Ekran</string>
     <string name="enter_sms_back"><![CDATA[<]]></string>
+    <string name="mapBoxKey">pk.eyJ1Ijoic2Vydml6bSIsImEiOiJjanFpMmYzZHYwaGQyNDhxeTJxbmV3bmZjIn0.6yEQk9nZZPuT9vuHQ9Kwog</string>
 </resources>
