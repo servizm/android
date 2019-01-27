@@ -1,20 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/fieldPostalCode"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="392dp"
+        android:ems="10"
+        android:hint="fieldCity"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fieldCity"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="448dp"
+        android:ems="10"
+        android:hint="fieldCity"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fieldLongitude"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="336dp"
+        android:ems="10"
+        android:hint="fieldLongitude"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fieldCountry"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="392dp"
+        android:ems="10"
+        android:hint="fieldCountry"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fieldAddressLine"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="448dp"
+        android:ems="10"
+        android:hint="fieldAddressLine"
+        android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +85,7 @@
         android:layout_width="314dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="Ad Soyad"
         android:inputType="textPersonName"
@@ -47,8 +96,8 @@
         android:id="@+id/txtEmail"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
@@ -59,8 +108,8 @@
         android:id="@+id/txtPhone"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="148dp"
         android:ems="10"
         android:hint="Telefon"
         android:inputType="phone"
@@ -71,8 +120,20 @@
         android:id="@+id/txtPlace"
         android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="244dp"
+        android:ems="10"
+        android:hint="Konum"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fieldLatitude"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="336dp"
         android:ems="10"
         android:hint="Konum"
         android:inputType="date"
@@ -96,26 +157,23 @@
         android:layout_width="311dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="200dp"
         android:ems="10"
         android:hint="Şifre"
         android:inputType="numberPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:layout_marginTop="320dp"
+    <Button
+        android:id="@+id/btnLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="296dp"
+        android:text="Get Location"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        mapbox:mapbox_cameraTargetLat="40.73581"
-        mapbox:mapbox_cameraTargetLng="-73.99155"
-        mapbox:mapbox_cameraZoom="11"
-        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v11" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
